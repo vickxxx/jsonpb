@@ -33,7 +33,7 @@ package jsonpb
 
 import (
 	"bytes"
-	"encoding/json"
+	// "encoding/json"
 	"io"
 	"math"
 	"reflect"
@@ -51,6 +51,8 @@ import (
 	tspb "github.com/golang/protobuf/ptypes/timestamp"
 	wpb "github.com/golang/protobuf/ptypes/wrappers"
 )
+
+// var json = jsoniter.ConfigCompatibleWithStandardLibrary
 
 var (
 	marshaler = Marshaler{}
