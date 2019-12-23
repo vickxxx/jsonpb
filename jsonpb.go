@@ -40,7 +40,7 @@ package jsonpb
 
 import (
 	"bytes"
-	"encoding/json"
+	// "encoding/json"
 	"errors"
 	"fmt"
 	"io"
@@ -50,11 +50,14 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"github.com/json-iterator/go"
 
 	"github.com/golang/protobuf/proto"
 
 	stpb "github.com/golang/protobuf/ptypes/struct"
 )
+var json = jsoniter.ConfigCompatibleWithStandardLibrary
+
 
 const secondInNanos = int64(time.Second / time.Nanosecond)
 const maxSecondsInDuration = 315576000000
